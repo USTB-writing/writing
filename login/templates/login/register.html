@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>写文</title>
+
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body class="lang-zh page-menu-coffee chrome non-logged-in" ontouchstart="">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-MGKBKT5'
+		height='0' width='0' style='display:none;visibility:hidden'>			
+	</iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="app-view-wrapper">
+	<!-- Navigation panel -->
+	<nav id="nav">
+		<div class="container">
+			<header class="header">
+				<a class="logo" href="">
+					<img src="./svg/logo.svg" alt="writing">
+				</a>
+				<div class="primary">
+					<ul>
+						<li class="stores">
+							<a id="stores-primary" href="./登录.html">
+								登陆
+							</a>
+						</li>
+						<li class="account">
+							<a id="account-primary" href="./注册.html">
+								<span data-reactroot="" class="">注册</span>
+							</a>
+						</li>
+						<li class="menu">
+							<a id="menu-primary" href="./个人信息.html">
+								个人信息
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<a class="icon trigger" rel="nav-overlay" id="nav-menu">
+					<img src="./svg/icon-hamburger.svg">
+					<span>更多</span>
+				</a>
+
+			</header>
+
+			<div class="body">
+				<nav class="container middle secondary">
+					<div class="tabs-wrapper">
+						<ul class="subcategories">
+							<li>
+								<a id="side_menu_all" href="./注册.html" class="active">
+									注册
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+
+
+	</nav>
+
+
+	<!-- Page content -->
+<section class="join-form submit-box">
+	<div class="wrapper wrapper-mobile">
+		<div class="login-form">
+			<div class="form-field">
+				<input type="hidden" value="version">
+				
+				<div class="field floating">
+					<div class="ok">
+						<input type="text" id="username" name="username" placeholder="用户名" value="" autocomplete="new-password"><label>用户名</label>
+					</div>
+				</div>
+
+				<div class="password-group-field">
+					<div class="field floating">
+						<div class="ok">
+							<input type="password" name="password" placeholder="密码" value="" autocomplete="new-password"><label>密码</label></div>
+						</div>
+						<div class="toggle-password hide"></div>
+				</div>
+
+				<div class="password-group-field">
+					<div class="field floating">
+						<div class="ok">
+							<input type="password" name="password" placeholder="确认密码" value="" autocomplete="new-password"><label>确认密码</label></div>
+						</div>
+						<div class="toggle-password hide"></div>
+				</div>
+
+				<div class="password-group-field">
+					<div class="field floating">
+						<div class="ok">
+							<input type="text" name="password" placeholder="手机号" value="" autocomplete="new-password" style="float: left;width: 75%;"><label>手机号</label></div>
+					        <button class="button small" disabled="" style="float: right;">
+						         <span>获取验证码</span>
+					        </button>
+						</div>
+						<div class="toggle-password hide"></div>				
+				</div>	
+
+				<div class="field floating">
+					<div class="field floating">
+						<div class="ok">
+							<input type="text" name="password" placeholder="短信验证码" value="" autocomplete="new-password"><label>短信验证码</label></div>
+						</div>
+						<div class="toggle-password hide"></div>
+				</div>
+
+				<div class="password-group-field">
+					<div class="field floating">
+						<div class="ok">
+							<input type="text" name="password" placeholder="真实姓名" value="" autocomplete="new-password"><label>真实姓名</label></div>
+						</div>
+						<div class="toggle-password hide"></div>
+				</div>
+
+				<div class="password-group-field">
+					<div class="field floating">
+						<div class="ok">
+							<input type="text" name="password" placeholder="身份证号" value="" autocomplete="new-password"><label>身份证号</label></div>
+						</div>
+						<div class="toggle-password hide"></div>
+				</div>
+				<div class="field checkbox">
+						<input type="checkbox" id="login-remember" value="on">
+						<label for="login-remember"><a>我已经阅读并同意条款</a></label>
+				</div>
+
+
+		</div>
+				<div class="actions">
+					<button class="button large" disabled="">
+						<span>注册</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
+
+</body>
+</html>
