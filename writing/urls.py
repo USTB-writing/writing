@@ -29,7 +29,7 @@ urlpatterns = [
     #加载login下的url
     path('login/', include(('login.urls','logins'),namespace='logins')),
 
-    #path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls)),
     url(r'^static/(?P<path>.*)$', static.serve,
       {'document_root': settings.STATIC_ROOT}, name='static'),
 ]
