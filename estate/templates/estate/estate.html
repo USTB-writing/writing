@@ -1,6 +1,9 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="js/index.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>写文</title>
@@ -9,7 +12,7 @@
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body class="lang-zh page-menu-coffee chrome non-logged-in" ontouchstart="">
+<body class="lang-zh page-menu-coffee chrome non-logged-in" ontouchstart="" onload="judge()">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
 		<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-MGKBKT5'
@@ -56,7 +59,7 @@
 
 			<div class="body">
 				<nav class="container middle secondary">
-					<a href="https://www.starbucks.com.cn/menu/" class="back">
+					<a href="" class="back">
 						<img src="./svg/icon-chevron-left.svg">
 						返回
 					</a>
@@ -65,16 +68,14 @@
 					<div class="tabs-wrapper">
 						<ul class="subcategories">
 							<li>
-								<a id="side_menu_all" href="./广场.html" >
+								<a id="side_menu_all" href="./广场.html" class="active">
 									广场
 								</a>
 							</li>
 							<li>
-								<a id="side_menu_whole_bean" href="./小区.html" class="active">
+								<a id="side_menu_whole_bean" href="./小区.html">
 									小区
 								</a>
-							</li>
-							<li>
 							</li>
 						</ul>
 					</div>
@@ -132,7 +133,7 @@
 					</li>
 				</ul>
 			</div>
-								<!--底部菜单-->
+						<!--底部菜单-->
     
     <div id="Tab" class="Tab">
         <a id="one" class="subTab text-center" href="个人信息.html">
