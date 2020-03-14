@@ -1,169 +1,83 @@
+{% extends "login/base.html" %}
 
+{% block head %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>写文</title>
-
-	<!-- CSS -->
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-
-<body class="lang-zh page-menu-coffee chrome non-logged-in" ontouchstart="">
-	<!-- Google Tag Manager (noscript) -->
-	<noscript>
-		<iframe src='https://www.googletagmanager.com/ns.html?id=GTM-MGKBKT5'
-		height='0' width='0' style='display:none;visibility:hidden'>			
-	</iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div id="app-view-wrapper">
-	<!-- Navigation panel -->
-	<nav id="nav">
-		<div class="container">
-			<header class="header">
-				<a class="logo" href="">
-					<img src="./svg/logo.svg" alt="writing">
-				</a>
-				<div class="primary">
-					<ul>
-						<li class="stores">
-							<a id="stores-primary" href="./登录.html">
-								登陆
-							</a>
-						</li>
-						<li class="account">
-							<a id="account-primary" href="./注册.html">
-								<span data-reactroot="" class="">注册</span>
-							</a>
-						</li>
-						<li class="menu">
-							<a id="menu-primary" href="./个人信息.html">
-								个人信息
-							</a>
-						</li>
-
-					</ul>
-				</div>
-
-				<a class="icon trigger" rel="nav-overlay" id="nav-menu" href="广场.html">
-					<img src="./svg/icon-hamburger.svg">
-					<span>更多</span>
-				</a>
-
-			</header>
-
-			<div class="body">
-				<nav class="container middle secondary">
-					<div class="tabs-wrapper">
-						<ul class="subcategories">
-							<li>
-								<a id="side_menu_all" href="./个人信息.html" class="active">
-									个人信息
-								</a>
-							</li>
-							<li>
-								<a id="side_menu_all" href="./我的稿件.html">
-									我的稿件
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-
-
-
-	</nav>
-
-
-	<!-- Page content -->
-<section class="join-form submit-box">
-	<div class="wrapper wrapper-mobile">
-		<div class="banner-info" >
-				<div class="col-md-5 header-left">
-					<img src="./svg/logo.svg" alt="">
-				</div>
-				<div class="col-md-7 header-right">
-					<h6 style="padding-left: 3em;">用户签名</h6>
-					<ul class="address">
-					
-					<li>
-							<ul class="address-text">
-								<li><b>用户名</b></li>
-								<li>写文</li>
-					        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
-					        </input>								
-							</ul>
-						</li>
-						<li>
-							<ul class="address-text">
-								<li><b>出生日期</b></li>
-								<li>今天</li>
-					        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
-					        </input>										
-							</ul>
-						</li>
-						<li>
-							<ul class="address-text">
-								<li><b>职业</b></li>
-								<li>投稿平台</li>
-					        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
-					        </input>										
-							</ul>
-						</li>
-						<li>
-							<ul class="address-text">
-								<li><b>联系方式</b></li>
-								<li>暂无</li>
-					        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
-					        </input>										
-							</ul>
-						</li>
-						<li>
-							<ul class="address-text">
-								<li><b>电子邮箱</b></li>
-								<li><a href=""> 电子邮箱</a></li>
-					        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">			
-							</ul>
-					        </input>									
-						</li>
-						
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-
-			</div>
-		</div>
-			<!--底部菜单-->
-    
-    <div id="Tab" class="Tab">
-        <a id="one" class="subTab text-center" href="个人信息.html">
-            <span class="iconfont">&#xe64d;</span>
-            <div class="menu_name">个人</div>
-        </a>
-        <a id="two" class="subTab text-center" href="我的稿件.html">
-            <span class="iconfont">&#xe8ac;</span>
-            <div class="menu_name">稿件</div>
-        </a>
-        <a id="three" class="subTab text-center" href="广场.html">
-            <span class="iconfont">&#xe64e;</span>
-            <div class="menu_name">广场</div>
-        </a>
-        <a id="four" class="subTab text-center" href="小区.html">
-            <span class="iconfont">&#xe8b6;</span>
-            <div class="menu_name">小区</div>
-        </a>
-    </div>
-		</div>
-	</section>
-
-
+<div class="body">
+    <nav class="container middle secondary">
+        <div class="tabs-wrapper">
+            <ul class="subcategories">
+                <li>
+                    <a id="side_menu_all" href="{% url 'info:info_page' %}" class="active">
+                        个人信息
+                    </a>
+                </li>
+                <li>
+                    <a id="side_menu_all" href="{% url 'estate:estate_page' %}">
+                        我的稿件
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </div>
 
-</body>
-</html>
+{% endblock %}
+
+{% block content %}
+
+    <div class="banner-info" >
+            <div class="col-md-5 header-left">
+                <img src="./svg/logo.svg" alt="">
+            </div>
+            <div class="col-md-7 header-right">
+                <h6 style="padding-left: 3em;">用户签名</h6>
+                <ul class="address">
+
+                <li>
+                        <ul class="address-text">
+                            <li><b>用户名</b></li>
+                            <li>写文</li>
+                        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
+                        </input>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="address-text">
+                            <li><b>出生日期</b></li>
+                            <li>今天</li>
+                        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
+                        </input>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="address-text">
+                            <li><b>职业</b></li>
+                            <li>投稿平台</li>
+                        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
+                        </input>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="address-text">
+                            <li><b>联系方式</b></li>
+                            <li>暂无</li>
+                        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
+                        </input>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="address-text">
+                            <li><b>电子邮箱</b></li>
+                            <li><a href=""> 电子邮箱</a></li>
+                        <input type="button" onclick="make()" value="修改" style="border:0;cursor:pointer;border-radius: 15px;margin-left: 10px;">
+                        </ul>
+                        </input>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+{% endblock %}
