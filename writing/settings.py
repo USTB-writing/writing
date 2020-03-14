@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'writing.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
-        'NAME': 'writing',  # 数据库名，先前创建的
+        'NAME': 'test',  # 数据库名，先前创建的
         'USER': 'root',     # 用户名，可以自己创建用户
-        'PASSWORD': 'writing_zhw612',  # 密码
-        'HOST': '127.0.0.1',  # mysql服务所在的主机ip
+        'PASSWORD': '@Sheep123',  # 密码
+        'HOST': '47.98.242.45',  # mysql服务所在的主机ip
         'PORT': '3306',         # mysql服务端口
     }
 }
