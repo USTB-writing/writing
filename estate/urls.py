@@ -15,22 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include
-
-from login import views as login_views
-
-from django.views import static ##新增
-from django.conf import settings ##新增
-from django.conf.urls import url ##新增
+from . import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    #加载login下的url
-    path('login/', include(('login.urls','login'),namespace='login')),
-    path('square/', include(('square.urls','square'),namespace='square')),
-    path('info/', include(('info.urls','info'),namespace='info')),
-    path('estate/', include(('estate.urls','estate'),namespace='estate')),
-    url(r'^static/(?P<path>.*)$', static.serve,
-      {'document_root': settings.STATIC_ROOT}, name='static'),
+
+    path('',views.estate,name="estate_page"),
+
 ]
