@@ -27,9 +27,10 @@ from django.conf.urls import url ##新增
 urlpatterns = [
     path('admin/', admin.site.urls),
     #加载login下的url
-    path('login/', include(('login.urls','logins'),namespace='logins')),
-
-    #path('admin/', admin.site.urls),
+    path('login/', include(('login.urls','login'),namespace='login')),
+    path('square/', include(('square.urls','square'),namespace='square')),
+    path('info/', include(('info.urls','info'),namespace='info')),
+    path('estate/', include(('estate.urls','estate'),namespace='estate')),
     url(r'^static/(?P<path>.*)$', static.serve,
       {'document_root': settings.STATIC_ROOT}, name='static'),
 ]
